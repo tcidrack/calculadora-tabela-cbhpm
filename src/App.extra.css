@@ -46,6 +46,13 @@
   --suave: #94a3b8;
 }
 
+/* ===== GRUPO DE FILTRO LARGO (campo de busca) =====
+   Largura confortável para o campo de busca, que divide a linha com os selects.
+   Precisa ser classe, e não style inline: o inline venceria a media query abaixo. */
+.grupo-filtro-largo {
+  flex: 1 1 340px;
+}
+
 /* ===== AUTOCOMPLETE DE CÓDIGO / NOME ===== */
 /* `min-width: 0` é obrigatório: com um mínimo em px aqui, o conteúdo não cabia no
    .grupo-filtro e transbordava por cima do rótulo seguinte da linha de filtros.
@@ -240,6 +247,14 @@
 }
 
 @media (max-width: 768px) {
+  /* .linha-filtros vira flex-direction:column aqui (App.css), e nesse eixo o flex-basis
+     passa a dimensionar a ALTURA, não a largura — era o que abria um vão de 340px entre
+     o campo de busca e os filtros seguintes. O .grupo-filtro já é width:100%, então não
+     há nada a distribuir. */
+  .grupo-filtro-largo {
+    flex: 0 0 auto;
+  }
+
   .autocomplete {
     min-width: 100%;
   }

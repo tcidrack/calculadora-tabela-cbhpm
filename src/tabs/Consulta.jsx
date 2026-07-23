@@ -221,9 +221,9 @@ export default function Consulta({ tema, cores }) {
       {/* FILTROS */}
       <div className="filtro">
         <div className="linha-filtros">
-          {/* flex-basis em vez de min-width: deixa encolher e quebrar a linha, em vez
-              de transbordar por cima do rótulo seguinte */}
-          <div className="grupo-filtro" style={{ flex: "1 1 340px" }}>
+          {/* .grupo-filtro-largo usa flex-basis em vez de min-width: deixa encolher e
+              quebrar a linha, em vez de transbordar por cima do rótulo seguinte */}
+          <div className="grupo-filtro grupo-filtro-largo">
             <label>INFORME O CÓDIGO</label>
             <BuscaProcedimento
               valor={codigo}

@@ -181,7 +181,7 @@ export default function TabelaCBHPM({ tema, cores }) {
       {/* FILTROS */}
       <div className="filtro">
         <div className="linha-filtros">
-          <div className="grupo-filtro" style={{ flex: "1 1 300px" }}>
+          <div className="grupo-filtro grupo-filtro-largo">
             <label>BUSCAR</label>
             <input
               className="filtro-processo"
