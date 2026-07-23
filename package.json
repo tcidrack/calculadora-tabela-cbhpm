@@ -1,0 +1,28 @@
+{
+  "name": "cbhpm-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:web && npm run build:offline",
+    "vercel-build": "vite build",
+    "build:web": "vite build",
+    "build:offline": "vite build --mode offline && node scripts/finalizar-offline.mjs",
+    "preview": "vite preview",
+    "extrair": "python scripts/extrair.py",
+    "validar": "node scripts/validar.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "recharts": "^3.8.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.4",
+    "vite-plugin-singlefile": "^2.3.0"
+  }
+}
